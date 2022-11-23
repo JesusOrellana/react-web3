@@ -19,7 +19,7 @@ const chains = [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum];
 
 // Wagmi client
 const { provider } = configureChains(chains, [
-  walletConnectProvider({ projectId: "12345" }),
+  walletConnectProvider({ projectId: "e66c5825ba8536b90b76d8805ef861a9" }),
 ]);
 const wagmiClient = createClient({
   autoConnect: true,
@@ -41,7 +41,7 @@ function App() {
       </WagmiConfig>
 
       <Web3Modal
-        projectId="12345"
+        projectId="e66c5825ba8536b90b76d8805ef861a9"
         ethereumClient={ethereumClient}
       />
       
