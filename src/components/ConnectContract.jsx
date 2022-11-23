@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { ethers } from "ethers";
 import OnchainID from '@onchain-id/solidity';
 const { ethereum } = window
+import detectEthereumProvider from '@metamask/detect-provider'
 
 
 export const ConnectContract = () => {
@@ -11,12 +12,17 @@ export const ConnectContract = () => {
 
     const connectProvider = async () => {
 
-        const provider = new ethers.providers.Web3Provider(ethereum);
-        const signer = provider.getSigner();
+        /* const provider = new ethers.providers.Web3Provider(ethereum); */
+
+        const provider = await detectEthereumProvider()
+
+        
+
+        /* const signer = provider.getSigner();
         let data = await signer.getAddress();
         console.log(data);
         setSigner(signer)
-        setAddress(data)
+        setAddress(data)  */
     
     }
 
