@@ -15,7 +15,7 @@ import { chain, configureChains, createClient, WagmiConfig } from "wagmi";
 
 import { Web3Button } from "@web3modal/react";
 
-const chains = [chain.mainnet, chain.polygon, chain.optimism, chain.arbitrum];
+const chains = [chain.polygonMumbai];
 
 // Wagmi client
 const { provider } = configureChains(chains, [
@@ -32,6 +32,7 @@ const ethereumClient = new EthereumClient(wagmiClient, chains);
 
 function App() {
   const [count, setCount] = useState(0)
+
 
   return (
     <div className="App">
@@ -53,7 +54,7 @@ function App() {
 
       <hr />
 
-      <ConnectContract/>
+      <ConnectContract provider = { wagmiClient } />
     </div>
   )
 }

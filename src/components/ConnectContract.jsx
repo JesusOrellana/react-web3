@@ -12,17 +12,13 @@ export const ConnectContract = () => {
 
     const connectProvider = async () => {
 
-        /* const provider = new ethers.providers.Web3Provider(ethereum); */
+        const provider = new ethers.providers.Web3Provider(ethereum);
 
-        const provider = await detectEthereumProvider()
-
-        
-
-        /* const signer = provider.getSigner();
+        const signer = provider.getSigner();
         let data = await signer.getAddress();
         console.log(data);
         setSigner(signer)
-        setAddress(data)  */
+        setAddress(data) 
     
     }
 

@@ -11,12 +11,14 @@
   "dependencies": {
     "@metamask/detect-provider": "^2.0.0",
     "@onchain-id/identity-sdk": "^1.5.1",
+    "@walletconnect/web3-provider": "^1.8.0",
     "@web3modal/ethereum": "^2.0.0-beta.6",
     "@web3modal/react": "^2.0.0-beta.6",
     "ethers": "^5.7.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "wagmi": "^0.8.6"
+    "wagmi": "^0.8.6",
+    "web3": "^1.8.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.24",
